@@ -1,3 +1,6 @@
+# retrofit build file
+*.g.dart
+
 # Miscellaneous
 *.class
 *.log
