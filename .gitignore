@@ -1,3 +1,6 @@
+# server api
+configs.dart
+
 # retrofit build file
 *.g.dart
 
