@@ -4,23 +4,23 @@ part 'box_office_entity.g.dart';
 
 @JsonSerializable()
 class BoxOfficeEntity {
-  int rnum;
-  int rank;
-  int rankInten;
+  String rnum;
+  String rank;
+  String rankInten;
   String rankOldAndNew;
   String movieCd;
   String movieNm;
   String openDt;
-  int salesAmt;
-  double salesShare;
-  double salesChange;
-  int salesAcc;
-  int audiCnt;
-  int audiInten;
-  int audiChange;
-  int audiAcc;
-  int scrnCnt;
-  int showCnt;
+  String salesAmt;
+  String salesShare;
+  String salesChange;
+  String salesAcc;
+  String audiCnt;
+  String audiInten;
+  String audiChange;
+  String audiAcc;
+  String scrnCnt;
+  String showCnt;
 
   BoxOfficeEntity({
     required this.rnum,
