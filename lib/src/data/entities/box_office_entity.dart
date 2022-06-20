@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'box_office.g.dart';
+part 'box_office_entity.g.dart';
 
 @JsonSerializable()
-class BoxOffice {
+class BoxOfficeEntity {
   int rnum;
   int rank;
   int rankInten;
@@ -22,7 +22,7 @@ class BoxOffice {
   int scrnCnt;
   int showCnt;
 
-  BoxOffice({
+  BoxOfficeEntity({
     required this.rnum,
     required this.rank,
     required this.rankInten,
@@ -42,7 +42,8 @@ class BoxOffice {
     required this.showCnt,
   });
 
-  factory BoxOffice.fromJson(Map<String, dynamic> json) => _$BoxOfficeFromJson(json);
+  factory BoxOfficeEntity.fromJson(Map<String, dynamic> json) =>
+      _$BoxOfficeEntityFromJson(json);
 
-  Map<String, dynamic> toJson() => _$BoxOfficeToJson(this);
+  Map<String, dynamic> toJson() => _$BoxOfficeEntityToJson(this);
 }
