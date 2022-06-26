@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lovie_lovemovie/src/presentation/pages/home_page/home_page.dart';
+import 'dependency_injection.dart' as di;
 
 void main() {
+  di.setUp();
   runApp(const MyApp());
 }
 
