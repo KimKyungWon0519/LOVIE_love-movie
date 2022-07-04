@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
-import 'package:lovie_lovemovie/src/data/entities/box_office_entity.dart';
+
+import 'box_office_entity.dart';
 
 part 'box_office_result_entity.g.dart';
 

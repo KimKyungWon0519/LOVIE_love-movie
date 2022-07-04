@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:lovie_lovemovie/src/data/entities/daily_box_office_entity.dart';
-import 'package:lovie_lovemovie/src/data/entities/response_model.dart';
+
+import '../entities/daily_box_office_entity.dart';
+import '../entities/response_model.dart';
 
 class BaseRepository {
   Future<ResponseModel> checkError(Function function) async {

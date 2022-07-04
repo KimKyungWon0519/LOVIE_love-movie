@@ -1,5 +1,6 @@
-import 'package:lovie_lovemovie/src/data/entities/box_office_entity.dart';
-import 'package:lovie_lovemovie/src/domain/model/box_office_model.dart';
+
+import '../../domain/model/box_office_model.dart';
+import '../entities/box_office_entity.dart';
 
 class BoxOfficeMapper {
   static BoxOfficeModel entityToModel(BoxOfficeEntity boxOfficeEntity) {

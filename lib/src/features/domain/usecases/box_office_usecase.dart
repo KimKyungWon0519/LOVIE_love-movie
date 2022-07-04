@@ -1,4 +1,5 @@
-import 'package:lovie_lovemovie/src/domain/repository/movie_repository.dart';
+
+import '../repository/movie_repository.dart';
 
 class BoxOfficeUseCase {
   final MovieRepository movieRepository;

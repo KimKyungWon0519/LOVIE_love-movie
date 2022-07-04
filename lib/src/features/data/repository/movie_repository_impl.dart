@@ -1,11 +1,10 @@
-import 'package:lovie_lovemovie/src/data/data_sources/movie_api.dart';
-import 'package:lovie_lovemovie/src/data/entities/box_office_entity.dart';
-import 'package:lovie_lovemovie/src/data/entities/daily_box_office_entity.dart';
-import 'package:lovie_lovemovie/src/data/entities/response_model.dart';
-import 'package:lovie_lovemovie/src/data/mapper/box_office_mapper.dart';
-import 'package:lovie_lovemovie/src/data/repository/base_repository.dart';
-import 'package:lovie_lovemovie/src/domain/model/box_office_model.dart';
-import 'package:lovie_lovemovie/src/domain/repository/movie_repository.dart';
+import '../../domain/repository/movie_repository.dart';
+import '../data_sources/movie_api.dart';
+import '../entities/box_office_entity.dart';
+import '../entities/daily_box_office_entity.dart';
+import '../entities/response_model.dart';
+import '../mapper/box_office_mapper.dart';
+import 'base_repository.dart';
 
 class MovieRepositoryImpl with BaseRepository implements MovieRepository {
   @override

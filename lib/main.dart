@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lovie_lovemovie/src/presentation/pages/home_page/home_page.dart';
 import 'dependency_injection.dart' as di;
+import 'src/features/presentation/pages/home_page/home_page.dart';
 
 void main() {
   di.setUp();
@@ -15,9 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'LOVIE',
-      theme: ThemeData(
-        useMaterial3: true
-      ),
+      theme: ThemeData(useMaterial3: true),
       home: const HomePage(),
     );
   }

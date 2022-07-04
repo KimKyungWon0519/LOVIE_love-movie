@@ -1,8 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
-import 'package:lovie_lovemovie/src/data/data_sources/movie_api.dart';
-import 'package:lovie_lovemovie/src/data/repository/movie_repository_impl.dart';
-import 'package:lovie_lovemovie/src/domain/usecases/box_office_usecase.dart';
+
+import 'src/features/data/data_sources/movie_api.dart';
+import 'src/features/data/repository/movie_repository_impl.dart';
+import 'src/features/domain/usecases/box_office_usecase.dart';
 
 final getIt = GetIt.instance;
 
