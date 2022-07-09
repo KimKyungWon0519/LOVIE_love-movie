@@ -7,7 +7,7 @@ import '../entities/daily_box_office_entity.dart';
 
 part 'movie_api.g.dart';
 
-@RestApi(baseUrl: baseUrl)
+@RestApi(baseUrl: movieApiBaseUrl)
 abstract class MovieApi {
   factory MovieApi(Dio dio, {String baseUrl}) = _MovieApi;
 
