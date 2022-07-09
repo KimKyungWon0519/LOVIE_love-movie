@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:lovie_lovemovie/src/features/domain/repository/movie_repository.dart';
+import 'package:lovie_lovemovie/src/features/presentation/bloc/box_office_bloc.dart';
 import 'package:lovie_lovemovie/src/features/presentation/viewmodel/home_viewmodel.dart';
 
 import 'src/features/data/data_sources/movie_api.dart';
@@ -14,6 +15,9 @@ void setUp() {
   MovieRepository movieRepository = MovieRepositoryImpl(movieApi: movieApi);
   BoxOfficeUseCase boxOfficeUseCase =
       BoxOfficeUseCase(movieRepository: movieRepository);
-  getIt.registerLazySingleton(
-      () => HomeViewModel(boxOfficeUseCase: boxOfficeUseCase));
+  BoxOfficeBloc boxOfficeBloc = BoxOfficeBloc([]);
+  getIt.registerLazySingleton(() => HomeViewModel(
+        boxOfficeUseCase: boxOfficeUseCase,
+        boxOfficeBloc: boxOfficeBloc,
+      ));
 }
