@@ -18,6 +18,7 @@ class BoxOfficeModel {
   String audiAcc;
   String scrnCnt;
   String showCnt;
+  String image;
 
   BoxOfficeModel({
     required this.rnum,
@@ -37,5 +38,6 @@ class BoxOfficeModel {
     required this.audiAcc,
     required this.scrnCnt,
     required this.showCnt,
+    this.image = '',
   });
 }
