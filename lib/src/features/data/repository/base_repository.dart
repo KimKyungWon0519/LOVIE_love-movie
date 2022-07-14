@@ -4,14 +4,14 @@ import '../entities/daily_box_office_entity.dart';
 import '../entities/response_model.dart';
 
 class BaseRepository {
-  Future<ResponseModel> checkError(Function function) async {
+  Future<ResponseModel> checkError<T>(Function function) async {
     ResponseModel responseModel;
 
     try {
-      DailyBoxOfficeEntity dailyBoxOffice = await function.call();
-      responseModel = ResponseModel.success(data: dailyBoxOffice);
+      T data = await function.call();
+      responseModel = ResponseModel<T>.success(data: data);
     } on DioError catch(e) {
-      responseModel = ResponseModel.error(data: 'asdf');
+      responseModel = ResponseModel<String>.error(data: 'asdf');
     }
 
     return responseModel;
