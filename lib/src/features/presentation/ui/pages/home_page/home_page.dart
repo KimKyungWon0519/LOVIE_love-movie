@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:lovie_lovemovie/dependency_injection.dart';
 import 'package:lovie_lovemovie/src/features/presentation/bloc/box_office_bloc.dart';
+import 'package:lovie_lovemovie/src/features/presentation/ui/pages/home_page/local_widgets/daily_boxoffice_horizontal_card_list.dart';
 import 'package:lovie_lovemovie/src/features/presentation/viewmodel/home_viewmodel.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,13 +16,9 @@ class HomePage extends StatelessWidget {
 
     return BlocProvider(
       create: (_) => homeViewModel.boxOfficeBloc,
-      child: BlocBuilder<BoxOfficeBloc, List>(
-        builder: (context, state) => Scaffold(
-          body: Center(
-            child: Text('$state'),
-          ),
-        ),
-      ),
+      child: Scaffold(
+        body: DailyBoxOfficeHorizontalCardList(),
+      )
     );
   }
 }
