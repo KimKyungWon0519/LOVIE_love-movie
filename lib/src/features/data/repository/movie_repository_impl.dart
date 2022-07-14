@@ -14,15 +14,16 @@ class MovieRepositoryImpl with BaseRepository implements MovieRepository {
 
   @override
   dynamic getDailyBoxOffice(String targetDt) async {
-    ResponseModel responseModel =
-        await checkError(() => movieApi.getDailyBoxOffice(targetDt: targetDt));
+    ResponseModel responseModel = await checkError<DailyBoxOfficeEntity>(
+        () => movieApi.getDailyBoxOffice(targetDt: targetDt));
 
     if (responseModel.isSuccess) {
       DailyBoxOfficeEntity dailyBoxOfficeEntity = responseModel.data;
       List<BoxOfficeEntity> boxOfficeEntityList =
           dailyBoxOfficeEntity.boxOfficeResult.dailyBoxOfficeList;
       return boxOfficeEntityList
-          .map((e) => BoxOfficeMapper.entityToModel(e)).toList();
+          .map((e) => BoxOfficeMapper.entityToModel(e))
+          .toList();
     } else {
       return '히히';
     }
