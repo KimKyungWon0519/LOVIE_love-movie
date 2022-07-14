@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:lovie_lovemovie/src/features/data/entities/naver_movie_info_entity.dart';
 
 part 'naver_move_result_entity.g.dart';
 
@@ -8,7 +9,7 @@ class NaverMovieResultEntity {
   int total;
   int start;
   int display;
-  NaverMovieResultEntity item;
+  List<NaverMovieInfoEntity> items;
 
 
   NaverMovieResultEntity({
@@ -16,7 +17,7 @@ class NaverMovieResultEntity {
     required this.total,
     required this.start,
     required this.display,
-    required this.item,
+    required this.items,
   });
 
   factory NaverMovieResultEntity.fromJson(Map<String, dynamic> json) =>
