@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     HomeViewModel homeViewModel = getIt.get<HomeViewModel>();
 
-    homeViewModel.getDailyBoxOffice('20220601');
+    homeViewModel.getDailyBoxOffice();
 
     return BlocProvider(
       create: (_) => homeViewModel.boxOfficeBloc,
