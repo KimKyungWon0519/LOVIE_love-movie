@@ -20,7 +20,7 @@ class NaverRespositoryImpl with BaseRepository implements NaverRepoistory {
     String image = '';
 
     if (responseModel.isSuccess) {
-      image = (responseModel.data as NaverMovieResultEntity).items.last.image;
+      image = (responseModel.data as NaverMovieResultEntity).items.first.image;
     }
 
     return image;
