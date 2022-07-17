@@ -26,8 +26,6 @@ class HomeViewModel extends Object {
       String image = await naverApiUseCase
           .getImageByName(boxOfficeList[i].movieNm);
 
-      print(image);
-
       boxOfficeList[i].image = image;
     }
 
